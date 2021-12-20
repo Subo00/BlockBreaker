@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Breakable
   - Unbreakable
+  - Gold
+  - Ball
   layers:
   - Default
   - TransparentFX

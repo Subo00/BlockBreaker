@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameSpeed: 1
-  _pointsPerBlockDestroyed: 5
   scoreText: {fileID: 4355450447704140929}
+  isAutoPlayEnabled: 0
   _score: 0
 --- !u!1001 &715797559
 PrefabInstance:
@@ -55,6 +55,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2275315254483215332}
     m_Modifications:
+    - target: {fileID: 4355450447340935351, guid: 5496f133833fe7d49bc116a1ae88285b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -286
+      objectReference: {fileID: 0}
+    - target: {fileID: 4355450447340935351, guid: 5496f133833fe7d49bc116a1ae88285b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 187
+      objectReference: {fileID: 0}
     - target: {fileID: 4355450447750634833, guid: 5496f133833fe7d49bc116a1ae88285b, type: 3}
       propertyPath: m_Name
       value: GameCanvas
