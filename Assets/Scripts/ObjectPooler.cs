@@ -12,12 +12,18 @@ public class ObjectPooler : MonoBehaviour
         public int size;
     }
     #region Singelton
-    public static ObjectPooler Instance;
-    private void Awake()
+     void Awake()
     {
-        Instance = this;
+        int GameSessionCount = FindObjectsOfType<GameSession>().Length;
+        if(GameSessionCount > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
-
     #endregion
     public List<Pool> pools;
     public Dictionary<string,Queue<GameObject>> poolDictionary; 
@@ -33,7 +39,7 @@ public class ObjectPooler : MonoBehaviour
             Queue<GameObject> objectPool = new Queue<GameObject>();
             for(int i = 0; i < pool.size; i++)
             {
-                GameObject obj = Instantiate(pool.prefab);
+                GameObject obj = Instantiate(pool.prefab, transform);
                 obj.SetActive(false);
                 objectPool.Enqueue(obj);
             }

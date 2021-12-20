@@ -12,7 +12,7 @@ public class Block : MonoBehaviour
     
     //cached reference
     Level level;
-    ObjectPooler objectPool;
+    ObjectPooler objectPooler;
 
     //State variables
     [SerializeField] private int _timesHit = 0;
@@ -22,7 +22,7 @@ public class Block : MonoBehaviour
         if(tag == "Breakable")
         level.CountBreakableBlocks();
 
-        objectPool = ObjectPooler.Instance;
+        objectPooler = FindObjectOfType<ObjectPooler>();
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -54,7 +54,7 @@ public class Block : MonoBehaviour
 
         for(int i = 0; i < _scoreToAdd; i++)
         {
-            objectPool.SpawnFromPool("Gold", transform.position, transform.rotation);
+            objectPooler.SpawnFromPool("Gold", transform.position, transform.rotation);
         }
         TriggerBreakVFX(); 
         Destroy(gameObject);

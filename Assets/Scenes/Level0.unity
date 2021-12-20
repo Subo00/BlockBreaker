@@ -3029,7 +3029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8927204586218424437, guid: 6533630622796814bb84ba3397c34dc7, type: 3}
       propertyPath: pools.Array.data[0].size
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8927204586218424437, guid: 6533630622796814bb84ba3397c34dc7, type: 3}
       propertyPath: pools.Array.data[0].prefab

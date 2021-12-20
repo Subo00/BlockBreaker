@@ -8,7 +8,7 @@ public class Gold : MonoBehaviour
 
     private void Start()
     {
-        gameSession = FindObjectOfType<GameSession>();
+        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,5 +18,8 @@ public class Gold : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
-
+    void OnEnable()
+    {
+        gameSession = FindObjectOfType<GameSession>();
+    }
 }
