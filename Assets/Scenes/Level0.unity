@@ -596,6 +596,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5773673201197127956, guid: 121199540410ca547a98e023db31e994, type: 3}
+      propertyPath: _gameSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773673201197127956, guid: 121199540410ca547a98e023db31e994, type: 3}
       propertyPath: isAutoPlayEnabled
       value: 0
       objectReference: {fileID: 0}
@@ -2733,6 +2737,10 @@ PrefabInstance:
     - target: {fileID: 1956443700521777554, guid: c1a9fba99c556f14d9f799a59257f574, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1956443700521777644, guid: c1a9fba99c556f14d9f799a59257f574, type: 3}
+      propertyPath: m_GravityScale
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1956443700521777645, guid: c1a9fba99c556f14d9f799a59257f574, type: 3}
       propertyPath: paddle0
