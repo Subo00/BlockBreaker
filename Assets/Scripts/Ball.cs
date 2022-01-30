@@ -16,6 +16,12 @@ public class Ball : MonoBehaviour
     //Cached component references
     private AudioSource audioSource;
     private Rigidbody2D _rigidbody2D;
+
+    public void Restart()
+    {
+        hasStarted = false;
+    }
+
     void Start()
     {
         paddleToBallVector = transform.position - paddle0.transform.position;

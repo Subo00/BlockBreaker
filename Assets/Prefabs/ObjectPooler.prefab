@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pools:
   - tag: Gold
-    prefab: {fileID: 0}
+    prefab: {fileID: 5260373332475226379, guid: 135fe3944a9069340a5a7c4b3339a138, type: 3}
     size: 50
   _offsetX: 1
   _offsetY: 0.5
