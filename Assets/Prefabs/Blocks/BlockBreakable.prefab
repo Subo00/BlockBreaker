@@ -122,8 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fcaa253e684124ca4010fd1d072faa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _breakSound: {fileID: 8300000, guid: e5ae635a7db00054c8205595847c7b24, type: 3}
+  _breakSounds:
+  - {fileID: 8300000, guid: b0829b37d3540be4fbdbd20057c37b4a, type: 3}
+  - {fileID: 8300000, guid: daef325308616374f8e9f63addfffd35, type: 3}
+  - {fileID: 8300000, guid: 41b0ad3ee879c2941ba2c3fa2c4621d4, type: 3}
   _breakVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
   _maxHits: 1
+  _scoreToAdd: 5
   hitSprits: []
   _timesHit: 0
