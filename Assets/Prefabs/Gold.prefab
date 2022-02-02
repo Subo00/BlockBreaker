@@ -115,9 +115,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldSounds:
-  - {fileID: 8300000, guid: 2c1ce75945d1b3543863009cf3bad343, type: 3}
-  - {fileID: 8300000, guid: 8b9b8a2ec9a40fb4eb4f824708ce2ae6, type: 3}
-  - {fileID: 8300000, guid: 98339294d87705144bf6923b861745a7, type: 3}
+  - {fileID: 8300000, guid: 0d5c452f73a36ea4da148383cba075f1, type: 3}
+  - {fileID: 8300000, guid: 297a840f22d921646bde7efdb776d92d, type: 3}
+  - {fileID: 8300000, guid: 918c0968ec2bade4eb311e3e22844cbc, type: 3}
+  - {fileID: 8300000, guid: 3445c3bc8569d7c47be9545105721c33, type: 3}
+  - {fileID: 8300000, guid: 45e023632cf1f234989cd30fddc750b5, type: 3}
+  - {fileID: 8300000, guid: 489de236698ba0f4db96ea9e88dbf52e, type: 3}
+  - {fileID: 8300000, guid: 6bfbc177a65e12940a51636a537ae21d, type: 3}
+  - {fileID: 8300000, guid: 82e062d63c5fb674b98d34cf2c2371ad, type: 3}
+  - {fileID: 8300000, guid: 59672be9910ff3e408feafec9145750a, type: 3}
+  - {fileID: 8300000, guid: b09b0eb70ff57f745b860a18aa4c97b0, type: 3}
+  - {fileID: 8300000, guid: 23eb33fa5db13094bb250008d3b5729a, type: 3}
+  - {fileID: 8300000, guid: a8a8daecb30626b49b86b705451ebe7c, type: 3}
 --- !u!50 &-1401497750506664371
 Rigidbody2D:
   serializedVersion: 4
