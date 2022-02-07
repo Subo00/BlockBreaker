@@ -7,10 +7,15 @@ public class GameSession : MonoBehaviour
 {
     //configuration parameters
     [Range(0.1f,5f)][SerializeField] private float _gameSpeed = 1f;
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI _scoreText;
+    [SerializeField] TextMeshProUGUI _lifeText;
+    [SerializeField] private int _startLife;
+    [SerializeField] private int _extraLifePerScore;
     public bool isAutoPlayEnabled = false;
     //State variables
-    [SerializeField] private int _score = 0;
+    private int _score = 0;
+    private int _life;
+
     
     
     void Awake()
@@ -27,10 +32,10 @@ public class GameSession : MonoBehaviour
     }
     void Start()
     {
-        UpdateText();
+    	_life = _startLife;
+        UpdateUI();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Time.timeScale = _gameSpeed;
@@ -39,12 +44,26 @@ public class GameSession : MonoBehaviour
     public void AddToScore(int scoreToAdd)
     {
         _score += scoreToAdd;
-        UpdateText();
+        if(_score % _extraLifePerScore == 0)
+        _life++;
+
+        UpdateUI();
     }
 
-    private void UpdateText()
+   	public void LoseLife()
+   	{
+   		_life--;
+   		UpdateUI();
+   		if(_life == 0)
+   		FindObjectOfType<SceneLoader>().LoadGameOver();
+   	} 
+
+
+
+    private void UpdateUI()
     {
-        scoreText.text = "SCORE: " + _score.ToString();
+        _scoreText.text = "SCORE: " + _score.ToString();
+        _lifeText.text = "LIFE: " + _life.ToString();
     }
 
     public void DestroyOneSelf()

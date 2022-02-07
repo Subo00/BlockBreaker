@@ -4,7 +4,7 @@ using UnityEngine;
 public class Block : MonoBehaviour
 {
     //configure parameters
-    [SerializeField] private AudioClip _breakSound;
+    [SerializeField] private AudioClip[] _breakSounds;
     [SerializeField] private GameObject  _breakVFX;
     [SerializeField] private int _maxHits = 1;
     [SerializeField] private int _scoreToAdd = 5;
@@ -49,7 +49,8 @@ public class Block : MonoBehaviour
 
     private void DestroyBlock()
     {
-        AudioSource.PlayClipAtPoint(_breakSound, Camera.main.transform.position, 1f);
+        AudioSource.PlayClipAtPoint(_breakSounds[UnityEngine.Random.Range(0,_breakSounds.Length)], 
+                                    Camera.main.transform.position, 1f);
         level.BlockDestroyed();
 
         for(int i = 0; i < _scoreToAdd; i++)

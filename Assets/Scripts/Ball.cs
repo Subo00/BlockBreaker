@@ -16,6 +16,12 @@ public class Ball : MonoBehaviour
     //Cached component references
     private AudioSource audioSource;
     private Rigidbody2D _rigidbody2D;
+
+    public void Restart()
+    {
+        hasStarted = false;
+    }
+
     void Start()
     {
         paddleToBallVector = transform.position - paddle0.transform.position;
@@ -56,7 +62,7 @@ public class Ball : MonoBehaviour
         {
             AudioClip clip = ballSounds[UnityEngine.Random.Range(0,ballSounds.Length)];
             audioSource.PlayOneShot(clip);
-            _rigidbody2D.velocity += velocityTweak;
+            //_rigidbody2D.velocity += velocityTweak;
         }
     }
 }
