@@ -12,7 +12,7 @@ public class ObjectPooler : MonoBehaviour
         public int size;
     }
     #region Singelton
-     void Awake()
+    /* void Awake()
     {
         int GameSessionCount = FindObjectsOfType<GameSession>().Length;
         if(GameSessionCount > 1)
@@ -23,7 +23,7 @@ public class ObjectPooler : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
-    }
+    }*/
     #endregion
     public List<Pool> pools;
     public Dictionary<string,Queue<GameObject>> poolDictionary; 

@@ -55,7 +55,7 @@ public class GameSession : MonoBehaviour
    		_life--;
    		UpdateUI();
    		if(_life == 0)
-   		FindObjectOfType<SceneLoader>().LoadStartScene();
+   		FindObjectOfType<SceneLoader>().LoadGameOver();
    	} 
 
 
